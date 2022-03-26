@@ -47,6 +47,24 @@ namespace PPotencia
                 //Console.WriteLine("Error, potencia indeterminada");
                 return -1; 
             }
+
+                  
         }
-    }
+        public double Division(double pDividendo, double pDivisor)
+        {
+            try
+            {
+                if (pDivisor != 0)
+                {
+                    return pDividendo / pDivisor;
+                }
+                return -1;
+            }
+            catch
+            {
+                //Console.WriteLine("Error, potencia indeterminada");
+                return -1;
+            }
+        }
+     }
 }
