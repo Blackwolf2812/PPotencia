@@ -12,7 +12,7 @@ namespace PPotencia
 
         public double Potencia(double pArgumento, int pExponente) 
         {
-            int exponente = pExponente;
+            /*int exponente = pExponente;
             double argum = pArgumento;
             double resultado = pArgumento;
             if (exponente != 0)
@@ -21,7 +21,32 @@ namespace PPotencia
             }
             else { return 1; }
 
-            return resultado;
+            return resultado;*/
+
+            try
+            {
+                if (pArgumento == 0 && pExponente != 0) 
+                {
+                    return 0;
+                }
+
+                if (pArgumento!=0)
+                {
+                    switch (pExponente)
+                    {
+                        case 0: return 1;
+
+                        case 1: return pArgumento;
+
+                        default: return pArgumento * Potencia(pArgumento, pExponente - 1);
+                    }
+                }
+                return -1;
+            } 
+            catch {
+                //Console.WriteLine("Error, potencia indeterminada");
+                return -1; 
+            }
         }
     }
 }
