@@ -10,15 +10,15 @@ namespace PPotencia
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Por favor usar un b mayor que 0.");
+            Console.WriteLine("b debe ser distinto de 0");
             Matem matem = new Matem();
             Console.Write("a: "); 
             double a= Convert.ToDouble(Console.ReadLine());
             Console.Write("b: "); 
-            int b= Convert.ToInt32(Console.ReadLine());
+            double b= Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("a^b= ");
-            Console.WriteLine(Convert.ToString(matem.Potencia(a,b)));
+            Console.Write("a/b= ");
+            Console.WriteLine(Convert.ToString(matem.Division(a,b)));
             Console.ReadLine();
         }
     }
